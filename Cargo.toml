@@ -495,6 +495,7 @@ sources-logs = [
   "sources-journald",
   "sources-kafka",
   "sources-kubernetes_logs",
+  "sources-docker_json_file_logs",
   "sources-logstash",
   "sources-nats",
   "sources-opentelemetry",
@@ -545,6 +546,7 @@ sources-internal_metrics = []
 sources-journald = []
 sources-kafka = ["dep:rdkafka"]
 sources-kubernetes_logs = ["vector-lib/file-source", "kubernetes", "transforms-reduce"]
+sources-docker_json_file_logs = ["vector-lib/file-source", "transforms-reduce"]
 sources-logstash = ["sources-utils-net-tcp", "tokio-util/net"]
 sources-mongodb_metrics = ["dep:mongodb"]
 sources-nats = ["dep:async-nats", "dep:nkeys"]
